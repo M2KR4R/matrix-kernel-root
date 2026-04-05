@@ -13,3 +13,5 @@ In_Matrix : constant Boolean := False; -- @ /root
 > [SYSTEM] : INITIATING ROOTKIT-01...
 > [STATUS] : KERNEL_HOOKING_SUCCESSFUL
 > [RESULT] : SYSTEM_CONTROL_ESTABLISHED
+
+Patch for ROOT_ACCESS #4 verified.
