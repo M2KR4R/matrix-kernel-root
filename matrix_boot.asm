@@ -8,22 +8,22 @@ section .text
 global _start
 
 _start:
-    ; --- write(1, msg, msg_len) ---
-    mov rax, 1                ; syscall: write
-    mov rdi, 1                ; file descriptor: stdout
-    lea rsi, [rel msg]        ; RIP-relative addressing (PIE safe)
-    mov rdx, msg_len          ; message length
+    
+    mov rax, 1                
+    mov rdi, 1                
+    lea rsi, [rel msg]        
+    mov rdx, msg_len          
     syscall
 
-    ; --- error check: if write returns negative, exit with 1 ---
+   
     test rax, rax
-    jns .write_ok             ; if rax >= 0, success
-    mov rdi, 1                ; failure exit code
+    jns .write_ok             
+    mov rdi, 1                
     jmp .exit
 
 .write_ok:
-    xor rdi, rdi              ; exit code 0
+    xor rdi, rdi              
 
 .exit:
-    mov rax, 60               ; syscall: exit
+    mov rax, 60               
     syscall
