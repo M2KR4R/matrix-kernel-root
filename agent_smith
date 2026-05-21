@@ -1,12 +1,13 @@
-; - Matrix Kernel - Project Smith
+; - Matrix Kernel - Project Smith -
 
-; Disclaimer: ! DO NOT EXECUTE !
 
-; This code is untested and was written solely to demonstrate the 'Agent Smith' concept from The Matrix.
-; It functions as a FORK BOMB and CAN lead to immediate system instability or a total crash!!!
-; This is intended strictly for my Matrix Lore repository and for educational interest!
+; WARNING: FORK BOMB CONCEPT / EDUCATIONAL USE ONLY
 
-; Use at your own risk—DO NOT RUN!!!
+; DISCLAIMER: PROVIDED 'AS IS' WITHOUT WARRANTY OF ANY KIND.
+; EXECUTION WILL CAUSE SYSTEM INSTABILITY OR CRASH.
+; THE AUTHOR ACCEPTS NO LIABILITY FOR ANY DAMAGE CAUSED.
+; DO NOT RUN. USE AT YOUR OWN RISK.
+
 
 section .data
     infect_msg  db "[SYSTEM] : OVERWRITING_HOST_IDENTITY...", 10
