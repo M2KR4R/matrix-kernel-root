@@ -1,0 +1,41 @@
+; - Matrix Kernel - Project Smith
+
+; Disclaimer: ! DO NOT EXECUTE !
+
+; This code is untested and was written solely to demonstrate the 'Agent Smith' concept from The Matrix.
+; It functions as a FORK BOMB and CAN lead to immediate system instability or a total crash!!!
+; This is intended strictly for my Matrix Lore repository and for educational interest!
+
+; Use at your own risk—DO NOT RUN!!!
+
+section .data
+    infect_msg  db "[SYSTEM] : OVERWRITING_HOST_IDENTITY...", 10
+    infect_len  equ $ - infect_msg
+
+section .text
+global _start
+
+_start:
+
+.replicate:
+    ; -- LOG: Initiating infection
+    mov rax, 1
+    mov rdi, 1
+    lea rsi, [rel infect_msg]
+    mov rdx, infect_len
+    syscall
+
+    ; -- FORK (syscall 57): DUPLICATION
+    ; The essence of Smith: one becomes two, two become four...
+    mov rax, 57
+    syscall
+
+    ; -- The new 'Smith' instance jumps back to the start and replicates again.
+    ; -- Infinite division until system failure (Fork-bomb logic)
+    test rax, rax
+    jz .replicate    ; "Child process.
+
+    ; -- Moves to the next sector.
+    jmp .replicate
+
+; -- Smith does not exit. Smith becomes the system.
